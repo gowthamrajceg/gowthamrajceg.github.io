@@ -50,7 +50,7 @@ body
   border-left: 5px solid azure;
     border-right: 5px solid azure;
   top;5px;left;5px;
-   animation:clockwisespin  2s linear 3;
+   animation:anticlockwisespin  2s linear 3;
 }
 @keyframes clockwisespin
 {from{transform:rotate(0deg);}
