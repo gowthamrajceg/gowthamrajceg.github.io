@@ -47,8 +47,8 @@ body
 .loader2
 {height:60px;
   width:60px;
-  border-left: 5px solid azure;
-    border-right: 5px solid azure;
+  border-left: 5px solid red;
+    border-right: 5px solid red;
   top;5px;left;5px;
    animation:anticlockwisespin  2s linear 3;
 }
