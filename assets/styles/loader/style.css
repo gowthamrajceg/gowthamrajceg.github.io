@@ -23,4 +23,40 @@ body
   font-size;50px;
   text-shadow; -1px 2px 2px  #000;
     text-align:center;
+  color:azure;
+}
+.loader-frame
+{width:70px;
+  height:70px;
+  margin:auto;
+  position:relative;
+}
+.loader1, .loader
+{
+  position:absolute;
+  border:5px solid transparent;
+  border-radius:50%;
+}
+.loader1
+{height:70px;
+  width:70px;
+  border-top: 5px solid azure;
+    border-bottom: 5px solid azure;
+  animation:clockwisespin  2s linear 3;
+}
+.loader2
+{height:60px;
+  width:60px;
+  border-left: 5px solid azure;
+    border-right: 5px solid azure;
+  top;5px;left;5px;
+   animation:clockwisespin  2s linear 3;
+}
+@keyframes clockwisespin
+{from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+@keyframes anticlockwisespin
+{from{transform:rotate(0deg);}
+  to{transform:rotate(-360deg);}
 }
