@@ -5,7 +5,7 @@
   <link rel = "stylesheet" href = "assets/styles/loader/style.css">
  </head>
 
- <body>
+ <body  onload="myFunction()">
 
  <div class = "preload" id = "preload">
   <div class ="logo">
@@ -18,11 +18,13 @@
  </div>
 
  <script>
+  window.onload=function() {
   function foo()
   {
    window.location.href="";
   }
   setInterval(foo,500);
+  }
   </script>
  </body>
 </html>
