@@ -1,0 +1,60 @@
+
+<!-- Modify this according to your requirement -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="icon" type="image/png" href="seee.png">
+  <title>SEEE-CEG</title>
+  <style type="text/css">
+      body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("template2.jpg");
+}
+  </style>
+<body style="color:red;">
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+
+
+    <h1 style="color:green;text-align: center;"> 
+  SEEEE Website will be  Launched in  <span id="countdown">10</span> seconds
+</h1>
+
+  
+
+
+<!-- JavaScript part -->
+<script type="text/javascript">
+    
+    // Total seconds to wait
+    var seconds = 10;
+    
+    function countdown() {
+        seconds = seconds - 1;
+        if (seconds < 0) {
+            // Chnage your redirection link here
+            window.location = "https://seee.org.in";
+        } else {
+            // Update remaining seconds
+            document.getElementById("countdown").innerHTML = seconds;
+            // Count down using javascript
+            window.setTimeout("countdown()", 1000);
+        }
+    }
+    
+    // Run countdown function
+    countdown();
+    
+</script>
+
+
+
+</body>
