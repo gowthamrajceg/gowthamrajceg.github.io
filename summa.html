@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/png" href="seee.png">
+<title>ALUMNI</title>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url("template2.jpg");
+}
+p {
+  font-size: 16px;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a.active {
+                    background-color: grey;
+                }
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.responsive {
+            max-width: 100%;
+            height: auto;
+        }
+
+/* Our Team
+-------------------------------------------------------*/
+
+.our-team .team-row {
+  margin-left: -40px;
+  margin-right: -40px;
+}
+
+.our-team .team-wrap {
+  padding: 0 40px;
+}
+
+.our-team .container-fluid {
+  padding: 0 50px;
+}
+
+.team-img img {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+}
+
+.team-member,
+.team-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-title {
+  margin: 30px 0 7px;
+}
+
+.overlay {
+  background-color: rgba(20,20,20,.7);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.team-details {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 5%;
+  overflow: hidden;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.team-details p {
+  color: #fff;
+}
+
+.team-img:hover .team-details {
+  opacity: 1;
+  margin-top: -80px;
+}
+
+.team-img:hover .overlay {
+  opacity: 1;
+}
+
+.socials a {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  background-color: transparent;
+}
+
+.socials i {
+  line-height: 37px;
+  color: #616161;
+  font-size: 14px;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  text-align: center;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.team-details .socials i {
+  color: #fff;
+}
+
+.socials a:hover i {
+  color: #fff;
+  background-color: #355c7d;
+}
+
+.footer-social-icons {
+    width: 350px;
+    display:block;
+    margin: 0 auto;
+}
+.social-icon {
+    color: #fff;
+}
+ul.social-icons {
+    margin-top: 10px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-instagram {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-instagram:hover {
+    background-color: #00aced;
+}
+.fa-rss {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-rss:hover {
+    background-color: #eb8231;
+}
+.fa-youtube {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-youtube:hover {
+    background-color: #e64a41;
+}
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+.fa-github {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-github:hover {
+    background-color: #5a32a3;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+
+  
+}
+
+
+.fa-map-marker {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-map-marker:hover {
+    background-color: #e64a41;
+}
+
+.fa-whatsapp {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-whatsapp:hover {
+    background-color: #5a32a3;
+}
+</style>
+</head>
+<body>
+<img src="bannertop.png" width="1834" height="365" class="responsive">
+<div class="navbar">
+  <a href="home1.html">Home</a>
+  <a href="event.html">Events</a> 
+  <a href="Hobbeeeclub.html">Hobbeee club</a>
+  <a href="alumni1.html" class="active">Alumni</a>
+   <a href="academic.html">Academics</a>
+  <a href="magazine.html">Magazines</a>
+  <a href="article.html">Articles</a>
+  <a href="facts.html">Facts</a>
+  <a href="Contactus.html">Office Bearers</a>
+  <a href="developer.html">Developer</a>
+</div>
+<img src="alumini.jpg" class="responsive">
+<div class="container">
+
+  <div class="row heading">
+    <div class="col-md-6 col-md-offset-3">
+      <h2 class="text-center bottom-line" style="color: red;"></h2>
+      <p class="subheading text-center"></p>
+    </div>
+  </div>
+
+  <div class="row team-row">
+
+    <div class="col-md-4 col-sm-6 team-wrap">
+      <div class="team-member text-center">
+        <div class="team-img">
+          <img src="lalitha.jpg" alt="">
+            </div>
+        <h3 class="team-title" style="color:white;text-align: justify;align-items: center;background: black;"> A LALITHA</h3>
+        <p style="color:white;text-align: justify;align-items: center;background: black;">
+          A Lalitha is remembered as the first woman electrical engineer of India. She completed her intermediate exam with first class from Queen Mary's College, Chennai and joined the College of Engineering Guindy, University of Madras, Chennai, in 1939 to pursue electrical engineering. After graduating in 1944, Lalitha assisted her father in his research and joined the Central Standard Organisation, Simla for a brief time. In 1953, she became an associate member of the Council of the Institution of Electrical Engineers (IEE) and a full member in 1966. In 1964, she became the first and the only woman engineer from India to attend the First International Conference of Women Engineers and Scientists (ICWES), New York. 
+
+
+</p>
+      </div>
+    </div>
+    <!-- end team member -->
+        <div class="col-md-4 col-sm-6 team-wrap">
+      <div class="team-member text-center">
+        <div class="team-img">
+          
+            </div>
+        <h3 class="team-title" style="color:white;text-align: justify;align-items: center;background: black;"></h3>
+        <p style="color:white;text-align: justify;align-items: center;background: black;">
+           
+
+
+</p>
+      </div>
+    </div>
+
+
+      <!-- end team member -->
+    <div class="col-md-4 col-sm-6 team-wrap">
+      <div class="team-member text-center">
+        <div class="team-img">
+          <img src="Gopal.jpg" alt="">
+            </div>
+        <h3 class="team-title" style="color:white;text-align: justify;align-items: center;background: black;">Gopalaswami Parthasarathy</h3>
+        <p style="color:white;text-align: justify;align-items: center;background: black;">
+          Gopalaswami Parthasarathy, popularly known as G. Parthasarathy is an Indian diplomat and author. He graduated with a B.E. degree in Electrical Engineering from the College of Engineering Guindy. He started his career as a commissioned officer in the Indian Army and subsequently, he joined the Indian Foreign Service. He was Ambassador of India to Myanmar, (1992–95), High Commissioner of India to Australia (1995–98), High Commissioner of India to Pakistan (1998-00) and High Commissioner of India to Cyprus (1990–92). Later he was the spokesperson of the Ministry of External Affairs and the Prime Minister's Office. 
+ 
+
+
+</p>
+      </div>
+    </div>
+
+    <!-- end team member -->
+
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row heading">
+    <div class="col-md-6 col-md-offset-3">
+      <h2 class="text-center bottom-line" style="color: red;"></h2>
+      <p class="subheading text-center"></p>
+    </div>
+  </div>
+
+  <div class="row team-row">
+
+    <div class="col-md-4 col-sm-6 team-wrap">
+      <div class="team-member text-center">
+        <div class="team-img">
+          <img src="Dhiraj.jpg" alt="">
+            </div>
+        <h3 class="team-title" style="color:white;text-align: justify;align-items: center;background: black;">Dhiraj C Rajaram</h3>
+        <p style="color:white;text-align: justify;align-items: center;background: black;">
+          Dhiraj C Rajaram is an Indian entrepreneur and the founder, chairman and CEO of Mu Sigma, a provider of analytics and decision sciences solutions. Rajaram completed his bachelor's degree in Electrical Engineering from College of Engineering Guindy, M.S. in computer engineering from Wayne State University, Michigan and MBA from The University of Chicago Booth School of Business. After completing his education, Rajaram worked as a management consultant at PricewaterhouseCoopers (PwC) and Booz Allen Hamilton in the US. In 2012 he was awarded the "Entrepreneur Of The Year India" award in the services sector by Ernst & Young - India. In early 2014, Rajaram was awarded the Young Turks award at the CNBC-TV18 India Business Leader Awards. 
+
+
+</p>
+      </div>
+    </div>
+    <!-- end team member -->
+        <div class="col-md-4 col-sm-6 team-wrap">
+      <div class="team-member text-center">
+        <div class="team-img">
+          <img src="veeraraghavan.jpg" alt="">
+            </div>
+        <h3 class="team-title" style="color:white;text-align: justify;align-items:">P.S. Veeraraghavan</h3>
+        <p style="color:white;text-align: justify;align-items: center;background: black;">
+          P.S. Veeraraghavan is a well-known space scientist and rocket technologist of India. He received his bachelor's degree in Electrical Engineering from College of Engineering Guindy in 1969. He has served as the Director of Vikram Sarabhai Space Centre and as the Director of ISRO Inertial Systems Unit (IISU) in Kerala. He is one of the most senior scientists at Indian Space Research Organization (ISRO) and is known for his contributions to launch vehicle technology, especially in the areas of integration, checkout and Inertial Systems Unit of ISROs launch vehicles. Presently, he is holding the honorary position of Prof. Vikram Sarabhai Distinguished Professor in VSSC, ISRO since January 2013. 
+
+
+</p>
+      </div>
+    </div>
+
+
+      <!-- end team member -->
+    <div class="col-md-4 col-sm-6 team-wrap">
+      <div class="team-member text-center">
+        <div class="team-img">
+          <img src="srinath.jpg" alt="">
+            </div>
+        <h3 class="team-title" style="color:white;text-align: justify;align-items: center;">Srinath Ravichandran</h3>
+        <p style="color:white;text-align: justify;align-items: center;background: black;">
+          Srinath Ravichandran is the co-founder and CEO of AgniKul Cosmos. He is an Electrical Engineering Graduate from the College of Engineering Guindy, Anna University. He worked in ABB in India before going for a Master's degree in Financial Engineering at Columbia University, New York. He worked in the financial services industry in New York for a few years before his love for aerospace took him to Los Angeles. He also enrolled for a master's programme in aerospace engineering at the University of Illinois, Urbana -Champaign. 
+
+
+
+</p>
+      </div>
+    </div>
+
+    <!-- end team member -->
+
+  </div>
+</div>
+ 
+<div class="center">
+  <h3><button style="background-color: #005991;color:white;" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdfneIG2RCvnbjmvfqzYeDUp7i4MGcVMTYhopWmur92fcQBaQ/viewform', '_blank'); return false;">REGISTER</button></h3>
+</div>
+
+<div class="footer-social-icons">
+    <h4 class="_14"></h4>
+    <ul class="social-icons">
+        <li><a href="https://www.facebook.com/wavesceg/" class="social-icon" target="_blank"> <i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/waves_ceg/" class="social-icon" target="_blank"> <i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/society-of-electrical-and-electronics-engineers" class="social-icon" target="_blank"> <i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://www.google.co.in/maps/place/EEE+Department/@13.0114738,80.2321428,17z/data=!3m1!4b1!4m5!3m4!1s0x3a52679f9a51089f:0x2fee8610ffae7694!8m2!3d13.0114738!4d80.2343315" class="social-icon" target="_blank"> <i class="fa fa-map-marker"></i></a></li>
+      
+        <li><a href="https://api.whatsapp.com/send?phone=+919500268452"><i class="fa fa fa-whatsapp" target="_blank"> 9500268452</i></a><li>
+
+
+        
+    </ul>
+</div>
+
+
+</body>
+</html>
